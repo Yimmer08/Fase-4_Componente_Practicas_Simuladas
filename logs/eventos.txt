@@ -1,2 +1,8 @@
 2026-05-11T20:41:44.190979200 - Cliente creado: Yimme
 2026-05-11T20:41:44.197664900 - Email inválido para el cliente: Test Error
+2026-05-11T21:07:16.688362900 - --- Iniciando simulación de servicios ---
+2026-05-11T21:07:16.696173500 - Nuevo servicio creado: Habitación VIP (Base: $200.0)
+2026-05-11T21:07:16.697189100 - Nuevo servicio creado: Masaje Terapéutico (Base: $60.0)
+2026-05-11T21:07:16.697189100 - Procesando: Servicio: Habitación VIP | Precio Base: $200.0 -> Total: $400.0
+2026-05-11T21:07:16.698363200 - Procesando: Servicio: Masaje Terapéutico | Precio Base: $60.0 -> Total: $110.0
+2026-05-11T21:07:16.698363200 - --- Fin de la simulación ---
