@@ -1,0 +1,2 @@
+2026-05-11T20:41:44.190979200 - Cliente creado: Yimme
+2026-05-11T20:41:44.197664900 - Email inválido para el cliente: Test Error
