@@ -1,0 +1,9 @@
+[2026-05-12T20:18:49.739853] - Sistema iniciado - Ejecutando pruebas de robustez
+[2026-05-12T20:18:49.750246600] - Reserva confirmada para Yimmer Mezu
+[2026-05-12T20:18:49.756412200] - Fallo al crear reserva: Datos insuficientes: Cliente o Servicio nulos.
+[2026-05-12T20:18:49.757412700] - Reserva confirmada para Carlos Sol
+[2026-05-12T20:18:49.759752900] - Reserva confirmada para Cliente 6
+[2026-05-12T20:18:49.760762400] - Reserva confirmada para Cliente 7
+[2026-05-12T20:18:49.761765300] - Reserva confirmada para Cliente 8
+[2026-05-12T20:18:49.761765300] - Reserva confirmada para Cliente 9
+[2026-05-12T20:18:49.763062600] - Reserva confirmada para Cliente 10

@@ -1,7 +1,5 @@
 package servicios;
 
-import utilidades.LoggerSistema; // Importamos tu logger
-
 public abstract class Servicio {
     protected String nombre;
     protected double precioBase;
@@ -9,14 +7,17 @@ public abstract class Servicio {
     public Servicio(String nombre, double precioBase) {
         this.nombre = nombre;
         this.precioBase = precioBase;
-        
-        // Generamos el evento para el log automáticamente al crear cualquier servicio
-        LoggerSistema.registrarEvento("Nuevo servicio creado: " + nombre + " (Base: $" + precioBase + ")");
     }
 
-    public abstract double calcularPrecioFinal();
-
-    public String getInformacion() {
-        return "Servicio: " + nombre + " | Precio Base: $" + precioBase;
+    // Método polimórfico (Abstracción)
+    public abstract double calcularCosto();
+    
+    // Sobrecarga de métodos (Requisito: variante con descuento)
+    public double calcularCosto(double descuentoEspecial) {
+        return calcularCosto() - descuentoEspecial;
     }
+
+    public abstract String describirServicio();
+    
+    public String getNombre() { return nombre; }
 }

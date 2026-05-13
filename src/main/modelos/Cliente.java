@@ -1,26 +1,34 @@
 package modelos;
 
-import excepciones.ClienteInvalidoException;
-import utilidades.LoggerSistema;
+import excepciones.SoftwareFJException;
 
 public class Cliente {
-    private int id;
+    // Atributos privados (Encapsulación)
     private String nombre;
     private String email;
+    private String cedula;
 
-    public Cliente(int id, String nombre, String email) throws ClienteInvalidoException {
-        if (!email.contains("@")) {
-            String error = "Email inválido para el cliente: " + nombre;
-            LoggerSistema.registrarEvento(error); // Guarda el error en el log
-            throw new ClienteInvalidoException(error);
+    public Cliente(String nombre, String email, String cedula) throws SoftwareFJException {
+        // Validaciones robustas
+        if (nombre == null || nombre.trim().isEmpty()) {
+            throw new SoftwareFJException("El nombre del cliente no puede estar vacío.");
         }
-        this.id = id;
+        if (email == null || !email.contains("@")) {
+            throw new SoftwareFJException("El correo '" + email + "' no tiene un formato válido.");
+        }
         this.nombre = nombre;
         this.email = email;
-        LoggerSistema.registrarEvento("Cliente creado: " + nombre);
+        this.cedula = cedula;
     }
 
-    public String getDetalles() {
-        return "ID: " + id + " | Nombre: " + nombre + " | Email: " + email;
+    // Getters y Setters
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+    
+    @Override
+    public String toString() {
+        return "Cliente: " + nombre + " | ID: " + cedula;
     }
 }
